@@ -40,6 +40,15 @@ p {
   }
 }
 
+.theme-dark {
+  background: #1d202a;
+  color: black
+}
+
+.theme-light {
+  background: linear-gradient;
+  color: dark
+}
 
 body {
   height: 100vh;	
