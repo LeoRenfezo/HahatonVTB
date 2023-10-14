@@ -50,6 +50,18 @@ p {
   color: dark
 }
 
+.borderElement {
+  background-color: #EEDDFF;
+  border: 6px solid #7922CC;
+  border-radius: 25px;
+}
+
+.accordion{
+  height: 50px;
+  overflow: hidden;
+  border-radius:12px;
+ }
+ 
 body {
   height: 100vh;	
   background: linear-gradient(to bottom right, #ffffff, #cfcfff) no-repeat; /* Градиент от #0077ff до #00aaff сверху вниз */
@@ -90,18 +102,18 @@ scrollbar-track-color: ivory;
   width: 12px; height: 2px;
   top: 30%; right: 20px;
   background: white;
-  transition: all 0.1s;
+  transition: all 0.5s;
 }
 
 .panel__checkbox:checked~.panel__heading:before {
   transform: rotate(90deg);
   opacity: 0;
-  transition: all 0.1s;
+  transition: all 0.5s;
 }
 
 .panel__heading:after {
   transform: rotate(90deg);
-  transition: all 0.1s;
+  transition: all 0.5s;
 }
 
 .panel__checkbox:checked~.panel__heading:after {
@@ -275,8 +287,8 @@ text-align: center}
   right: 0;
   bottom: 0;
   background-color: rgb(205, 222, 255);
-  -webkit-transition: .2s;
-  transition: .2s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .slider:before {
@@ -287,8 +299,8 @@ text-align: center}
   left: 4px;
   bottom: 4px;
   background-color: white;
-  -webkit-transition: .2s;
-  transition: .2s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 input:checked + .slider {
