@@ -1,6 +1,32 @@
+
+@font-face {
+	font-family: VTB; 
+  font-weight: normal;
+	src: url(VTBGroupUI-Regular.ttf); 
+}
+@font-face {
+	font-family: VTB; 
+  font-weight: normal;
+	src: url(VTBGroupUI-Medium.ttf);
+  .text-with-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  } 
+}
+@font-face {
+  font-family: VTB;
+  font-weight: bold;
+  src: url(VTBGroupUI-Bold.ttf);
+}
+
 p {
-  animation-duration: 3s;
+  animation-duration: 2s;
   animation-name: slidein;
+  font-family: VTB;
+  color: #58a3ff;
+}
+/*Обводка текста (не всего, это метод)*/
+.text-with-stroke {
+  -webkit-text-stroke: 0px rgb(0, 0, 3); /* Ширина и цвет обводки */
 }
 
 @keyframes slidein {
@@ -15,10 +41,16 @@ p {
   }
 }
 
-body { background-color: lightgray;
-font-family: Open Sans;
-font-size: px;
-color: dark;
+
+body { 
+  background: linear-gradient(to bottom right, #ffffff, #cfcfff); /* Градиент от #0077ff до #00aaff сверху вниз */
+  font-family: VTB;
+  font-size: px;
+  /* text-shadow: 2px 2px 4px rgba(6, 0, 95, 0.5); если захочешь поиграться с тенями каждого текста!*/ 
+  margin: 0;
+
+
+color: cornflowerblue;
 margin:0px;
 padding-bottom:px;
 scrollbar-face-color: lightgray;
@@ -34,13 +66,14 @@ scrollbar-track-color: ivory;
 }
 .panel {
   max-width: 500px; margin: 0 auto;
-  border: 1px solid cornflowerblue;
+  border: 1px solid rgb(255, 255, 255);
 }
+
 
 .panel__heading {
   display: block; position: relative; cursor: pointer;
   padding: 20px 15px; margin: 0;
-  background: cornflowerblue;color: white;
+  background: cornflowerblue;color: rgb(255, 255, 255);
 }
 
 .panel__heading:after, .panel__heading:before {
@@ -80,18 +113,37 @@ scrollbar-track-color: ivory;
   transition: all 0.5s;
 }
 
-.header { height:px;
-background:;
-border:px solid ;
+.header { 
+  height:px;
+  background:;
+  border:px solid ;
+  height: 60px; /* Высота полоски */
+  background:white; /* Цвет фона полоски */
+  border: 10px solid #006aff; /* Граница (если нужна) */
+  position: fixed; /* Фиксированная позиция, чтобы она всегда была сверху страницы */
+  top: 0; /* Полоска будет прикреплена к верхней части страницы */
+  width: 100%; /* По ширине страницы */
+  z-index: 1000; /* Вы можете настроить z-index в зависимости от вашей макета */
 }
 
-#mainbody { margin-left:px;
-padding-top:px;
-padding-right:px;
-padding-bottom:px;
-padding-left:px;
-background:;
-border:px solid ;
+/* Стили текста внутри полоски, если необходимо */
+.header h1 {
+  color: rgb(255, 255, 255); /* Цвет текста */
+  font-size: 18px; /* Размер шрифта */
+  margin: 0; /* Убираем внутренние отступы */
+  padding: 10px; /* Внутренний отступ внутри полоски */
+  text-align: center; /* Выравнивание текста по центру */
+}
+
+#mainbody { 
+  margin-top: 50px; /* Высота вашей полоски */
+  margin-left:px;
+  padding-top:px;
+  padding-right:px;
+  padding-bottom:px;
+  padding-left:px;
+  background:50px;
+  border:px solid ;
 }
 
 #menu { position:absolute;
@@ -140,6 +192,10 @@ h1 { font-size:px}
 h2 { font-size:px}
 
 h3 { font-size:px}
+
+h1, p{
+  margin-top: 55px;
+}
 
 p,h1,h2,h3 { margin: px px px px}
 
@@ -209,7 +265,7 @@ text-align: center}
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: rgb(205, 222, 255);
   -webkit-transition: .2s;
   transition: .2s;
 }
